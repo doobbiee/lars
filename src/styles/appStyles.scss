@@ -1,0 +1,110 @@
+$buttonColor: rgb(255, 255, 255);
+$buttonBackgroundColor: rgb(37, 143, 241);
+$buttonBackgroundColorHover: lighten(rgb(37, 143, 241), 15);
+
+.app-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  & > * {
+    width: max-content;
+  }
+
+  .title {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .contract-address {
+    margin: .5rem auto;
+    a {
+      color: $buttonBackgroundColor;
+      transition: .3s;
+      &:hover {
+        color: $buttonBackgroundColorHover;
+      }
+    }
+  }
+  
+  button {
+    margin: .5rem auto;
+    outline: none;
+    border: none;
+    padding: .75rem 1.5rem;
+    border-radius: .25rem;
+    cursor: pointer;
+    background-color: $buttonBackgroundColor;
+    color: $buttonColor;
+    transition: .3s;
+    &:hover {
+      background-color: $buttonBackgroundColorHover;
+    }
+  }
+
+  .buttons {
+    .roadmap {
+      margin-right: .25rem;
+    }
+    .marketplace {
+      margin-left: .25rem;
+    }
+  }
+
+  .connect, .feedback {
+    margin: 1rem 0;
+  }
+
+  .feedback {
+    .mint-amount {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: max-content;
+      margin: 0 auto;
+      p {
+        flex-grow: 1;
+        margin: 0 .5rem;
+      }
+      button {
+        padding: .25rem .5rem;
+        width: max-content;
+      }
+    }
+    button:disabled {
+      cursor: default;
+      background-color: $buttonBackgroundColorHover;
+    }
+  }
+
+  .socials {
+    .links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0.25rem;
+      .link {
+        margin: 0 0.25rem;
+        color: rgb(201, 201, 201);
+        transition: .5s;
+        cursor: pointer;
+        background-color: rgb(236, 236, 236);
+        height: 2.75rem;
+        width: 2.75rem;
+        font-size: 1.25rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        
+        &:hover {
+          background-color: $buttonBackgroundColor;
+          color: rgb(255, 255, 255);
+        }
+      }
+    }
+  }
+}

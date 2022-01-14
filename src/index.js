@@ -6,6 +6,12 @@ import store from "./redux/store";
 import { Provider } from "react-redux";
 import "./styles/reset.css";
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
+
+library.add(fab, faCheckSquare, faCoffee)
+
 ReactDOM.render(
   <Provider store={store}>
     <App />
