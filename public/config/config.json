@@ -2,15 +2,15 @@
   "CONTRACT_ADDRESS": "0x11Da1fa593E56c6286452074538a4727A8e26403",
   "SCAN_LINK": "https://rinkeby.etherscan.io/address/0x11da1fa593e56c6286452074538a4727a8e26403#code",
   "NETWORK": {
-    "NAME": "Ethereum",
-    "SYMBOL": "Rinkeby",
+    "NAME": "Rinkeby Test Network",
+    "SYMBOL": "ETH",
     "ID": 4
   },
   "NFT_NAME": "LARS",
   "SYMBOL": "TSTLAR",
   "MAX_SUPPLY": 100,
   "WEI_COST": 4000000000000000000,
-  "DISPLAY_COST": 4,
+  "DISPLAY_COST": 0.022,
   "GAS_LIMIT": 285000,
   "MARKETPLACE": "Opeansea",
   "MARKETPLACE_LINK": "https://testnets.opensea.io/collection/larv4",
