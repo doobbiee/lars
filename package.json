@@ -20,9 +20,8 @@
   "license": "MIT",
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts --openssl-legacy-provider build"  
+    "build": "react-scripts build"
   },
-
   "browserslist": {
     "production": [
       ">0.2%",
