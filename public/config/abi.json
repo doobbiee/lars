@@ -233,6 +233,11 @@
   {
     "inputs": [
       {
+        "internalType": "address",
+        "name": "_to",
+        "type": "address"
+      },
+      {
         "internalType": "uint256",
         "name": "_mintAmount",
         "type": "uint256"
