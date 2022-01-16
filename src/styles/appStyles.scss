@@ -56,6 +56,12 @@ $buttonBackgroundColorHover: lighten(rgb(37, 143, 241), 15);
 
   .connect, .feedback {
     margin: 1rem 0;
+    .error-message {
+      background-color: rgb(253, 50, 14);
+      padding: .25rem .5rem;
+      color: white;
+      border-radius: .25rem;
+    }
   }
 
   .feedback {

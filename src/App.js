@@ -42,8 +42,9 @@ function App() {
     console.log("Gas limit: ", totalGasLimit);
     setFeedback(`Minting your ${CONFIG.NFT_NAME}...`);
     setClaimingNft(true);
+
     blockchain.smartContract.methods
-      .mint(blockchain.account, mintAmount)
+      .mint(blockchain.account)
       .send({
         gasLimit: String(totalGasLimit),
         to: CONFIG.CONTRACT_ADDRESS,
@@ -148,7 +149,7 @@ function App() {
                         getData();
                       }}>Connect</button>
 
-                      {blockchain.errorMsg !== "" ? (<p>{blockchain.errorMsg}</p>) : null}
+                      {blockchain.errorMsg !== "" ? (<p className="error-message">{blockchain.errorMsg}</p>) : null}
                     </div>
                   )
                   :
