@@ -15,21 +15,21 @@ function App() {
   const [feedback, setFeedback] = useState(`Click buy to mint your NFT.`);
   const [mintAmount, setMintAmount] = useState(1);
   const [CONFIG, SET_CONFIG] = useState({
-    CONTRACT_ADDRESS: "",
-    SCAN_LINK: "",
+    CONTRACT_ADDRESS: "0x11Da1fa593E56c6286452074538a4727A8e26403",
+    SCAN_LINK: "https://rinkeby.etherscan.io/address/0x11da1fa593e56c6286452074538a4727a8e26403",
     NETWORK: {
-      NAME: "",
-      SYMBOL: "",
-      ID: 0,
+      NAME: "Rinkeby Test Network",
+      SYMBOL: "ETH",
+      ID: 4,
     },
-    NFT_NAME: "",
-    SYMBOL: "",
-    MAX_SUPPLY: 1,
-    WEI_COST: 0,
-    DISPLAY_COST: 0,
-    GAS_LIMIT: 0,
-    MARKETPLACE: "",
-    MARKETPLACE_LINK: "",
+    NFT_NAME: "LARS",
+    SYMBOL: "TSTLAR",
+    MAX_SUPPLY: 100,
+    WEI_COST: 22000000000000000,
+    DISPLAY_COST: 0.022,
+    GAS_LIMIT: 285000,
+    MARKETPLACE: "Opeansea",
+    MARKETPLACE_LINK: "https://testnets.opensea.io/collection/larv4",
     SHOW_BACKGROUND: false,
   });
 
