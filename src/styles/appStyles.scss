@@ -1,6 +1,8 @@
 $buttonColor: rgb(255, 255, 255);
 $buttonBackgroundColor: rgb(37, 143, 241);
 $buttonBackgroundColorHover: lighten(rgb(37, 143, 241), 15);
+$grey: #BCB9B9;
+$borderWidth: 8px;
 
 .app-container {
   text-align: center;
@@ -8,109 +10,202 @@ $buttonBackgroundColorHover: lighten(rgb(37, 143, 241), 15);
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  background-color: rgb(49, 49, 49);
 
   & > * {
     width: max-content;
   }
 
-  .title {
-    font-size: 2rem;
-    font-weight: 700;
+  .site-title {
+    // background-color: white;
+    border: $borderWidth solid white;
+    color: white;
+    padding: 2rem 3rem;
+    border-radius: .5rem;
+    vertical-align: middle;
+    margin: 1rem auto;
+    width: 50%;
+    max-width: 60rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      font-size: 6rem;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
   }
 
-  .contract-address {
-    margin: .5rem auto;
-    a {
-      color: $buttonBackgroundColor;
+
+  .images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: max-content;
+    grid-gap: 1rem;
+    margin: 2rem auto;
+    img {
+      object-fit: cover;
+      width: 10rem;
+      height: 10rem;
       transition: .3s;
       &:hover {
-        color: $buttonBackgroundColorHover;
+        transform: scale(1.1);
       }
     }
   }
-  
-  button {
-    margin: .5rem auto;
-    outline: none;
-    border: none;
-    padding: .75rem 1.5rem;
-    border-radius: .25rem;
-    cursor: pointer;
-    background-color: $buttonBackgroundColor;
-    color: $buttonColor;
-    transition: .3s;
-    &:hover {
-      background-color: $buttonBackgroundColorHover;
-    }
-  }
 
-  .buttons {
-    .roadmap {
-      margin-right: .25rem;
-    }
-    .marketplace {
-      margin-left: .25rem;
-    }
-  }
-
-  .connect, .feedback {
-    margin: 1rem 0;
-    .error-message {
-      background-color: rgb(253, 50, 14);
-      padding: .25rem .5rem;
-      color: white;
-      border-radius: .25rem;
-    }
-  }
-
-  .feedback {
-    .mint-amount {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: max-content;
-      margin: 0 auto;
-      p {
-        flex-grow: 1;
-        margin: 0 .5rem;
+  .blockchain-data {
+    margin: 1rem auto;
+    border: $borderWidth solid white;
+    color: white;
+    padding: 5rem;
+    border-radius: .5rem;
+    width: max-content;
+      .title {
+        font-size: 2rem;
+        font-weight: 700;
       }
+    
+      .contract-address {
+        margin: .5rem auto;
+        a {
+          color: $buttonBackgroundColor;
+          transition: .3s;
+          &:hover {
+            color: $buttonBackgroundColorHover;
+          }
+        }
+      }
+      
       button {
-        padding: .25rem .5rem;
-        width: max-content;
-      }
-    }
-    button:disabled {
-      cursor: default;
-      background-color: $buttonBackgroundColorHover;
-    }
-  }
-
-  .socials {
-    .links {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 0.25rem;
-      .link {
-        margin: 0 0.25rem;
-        color: rgb(201, 201, 201);
-        transition: .5s;
+        margin: .5rem auto;
+        outline: none;
+        border: none;
+        padding: .75rem 1.5rem;
+        border-radius: .25rem;
         cursor: pointer;
-        background-color: rgb(236, 236, 236);
-        height: 2.75rem;
-        width: 2.75rem;
-        font-size: 1.25rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        
+        background-color: $buttonBackgroundColor;
+        color: $buttonColor;
+        transition: .3s;
         &:hover {
-          background-color: $buttonBackgroundColor;
-          color: rgb(255, 255, 255);
+          background-color: $buttonBackgroundColorHover;
+        }
+      }
+    
+      .buttons {
+        .roadmap {
+          margin-right: .25rem;
+        }
+        .marketplace {
+          margin-left: .25rem;
+        }
+      }
+    
+      .connect, .feedback {
+        margin: 1rem 0;
+        .error-message {
+          background-color: rgb(253, 50, 14);
+          padding: .25rem .5rem;
+          color: white;
+          border-radius: .25rem;
+        }
+      }
+    
+      .feedback {
+        .mint-amount {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: max-content;
+          margin: 0 auto;
+          p {
+            flex-grow: 1;
+            margin: 0 .5rem;
+          }
+          button {
+            padding: .25rem .5rem;
+            width: max-content;
+          }
+        }
+        button:disabled {
+          cursor: default;
+          background-color: $buttonBackgroundColorHover;
+        }
+      }
+    
+      .socials {
+        .links {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 0.25rem;
+          .link {
+            margin: 0 0.25rem;
+            color: rgb(201, 201, 201);
+            transition: .5s;
+            cursor: pointer;
+            background-color: rgb(236, 236, 236);
+            height: 2.75rem;
+            width: 2.75rem;
+            font-size: 1.25rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+  
+            &.opensea {
+              svg {
+                height: 1.5rem;
+                width: auto;
+                fill: rgb(201, 201, 201);
+                transition: .3s;
+              }
+            }
+            
+            &:hover {
+              background-color: $buttonBackgroundColor;
+              color: rgb(255, 255, 255);
+              &.opensea {
+                svg {
+                  height: 1.5rem;
+                  width: auto;
+                  fill: rgb(255, 255, 255);
+                }
+              }
+            }
+          }
         }
       }
     }
+
+}
+
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 600px) {
+  .app-container {
+    .site-title {
+      width: 80%;
+    }
+    .blockchain-data {
+      width: 80%;
+    }
   }
 }
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) { }
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 992px) { }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) { }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (max-width: 1400px) { }
