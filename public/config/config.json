@@ -1,18 +1,18 @@
 {
-  "CONTRACT_ADDRESS": "0x2b0290A07fE4bD8096Ad89136d25d2d0d4A709D1",
-  "SCAN_LINK": "https://rinkeby.etherscan.io/address/0x2b0290a07fe4bd8096ad89136d25d2d0d4a709d1",
+  "CONTRACT_ADDRESS": "0xd5CDe5e03dB46379155f90aF71603bb0B9EbB867",
+  "SCAN_LINK": "https://etherscan.io/address/0xd5cde5e03db46379155f90af71603bb0b9ebb867",
   "NETWORK": {
-    "NAME": "Rinkeby Test",
+    "NAME": "Ethereum mainnet",
     "SYMBOL": "ETH",
-    "ID": 4
+    "ID": 1
   },
-  "NFT_NAME": "Larv6",
-  "SYMBOL": "T6",
-  "MAX_SUPPLY": 100,
-  "WEI_COST": 22000000000000000,
-  "DISPLAY_COST": 0.022,
+  "NFT_NAME": "Larva Sads",
+  "SYMBOL": "LARS",
+  "MAX_SUPPLY": 5000,
+  "WEI_COST": 15000000000000000,
+  "DISPLAY_COST": 0.015,
   "GAS_LIMIT": 285000,
   "MARKETPLACE": "Opeansea",
-  "MARKETPLACE_LINK": "https://testnets.opensea.io/collection/larv4",
+  "MARKETPLACE_LINK": "",
   "SHOW_BACKGROUND": true
 }
