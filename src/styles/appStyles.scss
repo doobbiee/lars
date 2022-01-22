@@ -2,7 +2,7 @@ $buttonColor: rgb(255, 255, 255);
 $buttonBackgroundColor: rgb(37, 143, 241);
 $buttonBackgroundColorHover: lighten(rgb(37, 143, 241), 15);
 $grey: #BCB9B9;
-$borderWidth: 8px;
+$borderWidth: 10px;
 
 .app-container {
   text-align: center;
@@ -18,8 +18,7 @@ $borderWidth: 8px;
   }
 
   .site-title {
-    // background-color: white;
-    border: $borderWidth solid white;
+    outline: $borderWidth solid white;
     color: white;
     padding: 2rem 3rem;
     border-radius: .5rem;
@@ -58,7 +57,8 @@ $borderWidth: 8px;
 
   .blockchain-data {
     margin: 1rem auto;
-    border: $borderWidth solid white;
+    outline: $borderWidth solid white;
+    display: inline-block;
     color: white;
     padding: 5rem;
     border-radius: .5rem;
